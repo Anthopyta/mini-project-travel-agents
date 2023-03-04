@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency Website</title>
+  <link rel="stylesheet" href="../style/index.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#banner">Home</a></li>
+      <li><a href="#packages">Our Packages</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner Section -->
+  <section id="banner">
+    <div class="banner-content">
+      <h1>Welcome to Our Travel Agency</h1>
+      <p>Experience the best vacation of your life with our travel packages</p>
+      <button>Book Now</button>
+    </div>
+  </section>
+
+  <!-- Our Packages Section -->
+  <section id="packages">
+    <h2>Our Packages</h2>
+    <div class="package-item">
+      <h3>Package 1</h3>
+      <p>Description of Package 1</p>
+      <button>Book Now</button>
+    </div>
+    <div class="package-item">
+      <h3>Package 2</h3>
+      <p>Description of Package 2</p>
+      <button>Book Now</button>
+    </div>
+    <div class="package-item">
+      <h3>Package 3</h3>
+      <p>Description of Package 3</p>
+      <button>Book Now</button>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us to book your next adventure</p>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- javascript -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+  
+    function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("banner-content");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 5000);
+    }
+  </script>
+</body>
+</html>
